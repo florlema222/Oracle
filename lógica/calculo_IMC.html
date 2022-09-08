@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculo IMC</title>
+</head>
+<body>
+  <h1>Calcular el IMC</h1>
+  <h2>Fórmula: peso/altura^2</h2>
+
+  <script>
+    function enter() {
+      document.write("<br><br><br><hr><br><br>");
+    }
+    function imprimir(algo) {
+      document.write("<big>" + algo + "</big>")
+      enter();
+    }
+    function calculoIMC(peso,altura) {
+      imc = peso / (altura * altura);
+      return imc
+    }
+
+    nombre =parseInt(prompt("Informe su nombre"));
+    peso = parseInt(prompt("Informe su peso"));
+    altura = parseFloat(prompt("Informe su altura"));
+    imcCalculado = calculoIMC(peso,altura);
+    imprimir("El IMC de los valores dados es de: " + imcCalculado);
+
+    //<= 18.5 insuficiencia ponderal, abajo de lo recomendado
+    // >18.5 && <= 24.9 intervalo normal
+    // >= 25 && <= 29.9 sobrepeso
+    // > 29.9 obesidad
+
+    if (imcCalculado <= 18.5) {
+      imprimir("Insuficiencia ponderal, abajo de lo recomendado")
+    } if (imcCalculado > 18.5 && imcCalculado <= 24.9) {
+      imprimir("intervalo normal")
+    } if (imcCalculado >= 25 && imcCalculado <= 29.9) {
+      imprimir("sobrepeso")
+    } if (imcCalculado > 29.9) {
+      imprimir("obesidad, por encima de lo recomendado")
+    };
+  </script>
+
+</body>
+</html>

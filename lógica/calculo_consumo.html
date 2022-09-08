@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculo consumo</title>
+</head>
+<body>
+  <h3>Alcohol o gasolina?</h3>
+  <p>Problema 1:</p>
+  <br>
+
+  <script>
+    //funciones para reducir codigo
+    function saltarLinea() {
+      document.write("<br>");
+    };
+    function imprimir(param) {
+      document.write(param);
+      saltarLinea();
+    };
+
+    //código de cálculo de combustible/distancia
+    imprimir("holis")
+    const tanque = 40;
+    const gasolina = 480;
+    imprimir("La eficiencia del carro es de " + (gasolina/tanque) + " kilometros por cada litro de gasolina.");
+    const alcohol = 300;
+    imprimir("La eficiencia del carro es de " + (alcohol/tanque) + " kilometros por cada litro de gasolina.");
+  </script>
+
+</body>
+</html>

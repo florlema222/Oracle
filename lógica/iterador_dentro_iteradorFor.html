@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boton e input</title>
+</head>
+<body>
+  <h1>Boton e input</h1>
+
+  <input type="text">
+  <script>
+    function enter() {
+      document.write("<br><br><br><hr><br><br>");
+    }
+    function imprimir(algo) {
+      document.write("<big>" + algo + "</big>")
+      enter();
+    }
+
+    for(let lineas = 1; lineas <= 3; lineas ++) {
+      for(let columnas = 1; columnas <=10; columnas ++){
+        document.write("*");
+      }
+      enter();
+    }
+  </script>
+
+</body>
+</html>

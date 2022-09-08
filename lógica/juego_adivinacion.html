@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego adivinacion</title>
+</head>
+<body>
+  <h1>Juego adivinacion</h1>
+
+  <script>
+    function enter() {
+      document.write("<br><br><br><hr><br><br>");
+    }
+    function imprimir(algo) {
+      document.write("<big>" + algo + "</big>")
+      enter();
+    }
+
+    const numeroPensado = Math.round(Math.random()*10);
+    intento =parseInt(prompt("Adivine el numero del 0 al 10: "));
+
+    if (intento > numeroPensado) {
+      imprimir("te pasaste!")
+    } else if (intento < numeroPensado) {
+      imprimir("te quedaste corto")
+    } else {
+      imprimir("adivinaste!")
+    };
+  </script>
+
+</body>
+</html>
