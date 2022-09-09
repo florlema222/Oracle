@@ -7,6 +7,28 @@
 <script>
   const pantalla = document.querySelector("canvas"); //conectando la etiqueta canvas con javascript
   const pincel = pantalla.getContext("2d"); //encargado de graficar, "traeme todo el contenido que este en pantalla y 2d es porque estamos trabajando en dos dimensiones, alto y ancho"
-  
 
+  //crear bandera de italia con gris
+
+  pincel.fillStyle = "lightgrey"; //propiedad o cca
+  pincel.fillRect(0,0,600,400); //funcion fillrect toma cuatro parametros: pos inicial(x0,y0) posicion final (x600,y400)   => rellena todo de negro por defecto
+  pincel.fillStyle = "green"; //dibujo con verde
+  pincel.fillRect(0,0,200,400) //parametros para ese nuevo color designado
+  pincel.fillStyle = "red";
+  pincel.fillRect(400,0,200,400)
+
+  //graficar un triangulo amarillo y circunferencia azul en el medio de la bandera
+
+  //triangulo
+  pincel.fillStyle = "yellow"
+  pincel.beginPath(); //comienza un nuevo camino con el pincel siguiendo instrucciones:
+  pincel.moveTo(300,200) //centro
+  pincel.lineTo(200,400);
+  pincel.lineTo(400,400);
+  pincel.fill();
+  //circunferencia azul
+  pincel.fillStyle = "blue"
+  pincel.beginPath();
+  pincel.arc(300,200,50,0,2*3.14) //punto de inicio xy, radio, angulo inicial
+  pincel.fill();
 </script>
