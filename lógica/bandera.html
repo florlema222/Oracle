@@ -1,0 +1,39 @@
+<body>
+  <script>
+    function dibujarCuadradoVerde(x,y,color){
+      var pantalla = document.querySelector("canvas");
+      var pincel = pantalla.getContext("2d");
+      pincel.fillStyle=color;
+      pincel.fillRect(x,y,50,50)
+      pincel.strokeStyle = "black"
+      pincel.strokeRect(x,y,50,50)
+    }
+
+    dibujarCuadradoVerde(0,0,'red');
+    dibujarCuadradoVerde(0,50,'yellow');
+    dibujarCuadradoVerde(0,100,'green');
+
+    var x = 0;
+    while (x < 600){
+      dibujarCuadradoVerde(x,160,'green');
+      x += 50
+    }
+
+    var b = 0
+    while (b < 600){
+      dibujarCuadradoVerde(b,220,'green');
+      b += 50
+      dibujarCuadradoVerde(b,220,'yellow');
+      b += 50
+      dibujarCuadradoVerde(b,220,'red');
+      b += 50
+    }
+
+    for(var c = 0; c < 600; c += 50 ) {
+      dibujarCuadradoVerde(c,270,'green');
+      dibujarCuadradoVerde(c,320,'yellow');
+      dibujarCuadradoVerde(c,370,'red');
+
+    }
+  </script>
+</body>
