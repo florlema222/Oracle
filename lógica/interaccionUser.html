@@ -23,7 +23,7 @@
     console.log(x + ', ' + y);
   }
   function alterarColor() {
-    if (indiceColor >= 2) {
+    if (indiceColor >= arrayLength) {
       indiceColor = 0
     } else {
       indiceColor++
@@ -32,9 +32,9 @@
   }
 
   let colores = ["blue", "red", "green"]
+  let arrayLength = colores.length - 1
   let indiceColor = 0
   pincel.fillStyle = colores[indiceColor];
-  //pantalla.onclick = exibirAlerta;
   pantalla.onclick = dibujarCirculo
   pantalla.oncontextmenu = alterarColor;
 </script>
